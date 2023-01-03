@@ -25,7 +25,7 @@ In the case of the `getMovies()` and `getQuotesForMovie()` methods, the user of 
 can be used in the API. The `buildRequestURI()` helper function generates the final URI if query params are passed in as an object. 
 
 The query params need to be converted into a string in order to combine it with the base URI to call the API, this is done with the `returnQueryParams()` helper function.
-This function loops through the keys and values of the query params object and creates a string in the following format:
+This function loops through the keys and values of the query params object and creates a string in the following format and appends it to the base URI:
 
 ```js
   ?param1=value&param2=value
