@@ -19,7 +19,7 @@ module.exports = class LotrSDK {
         }
     }
     
-    async getMovieByID (movieId) {
+    async getMovieByID(movieId) {
         try {
             const { data: movie } = await axios.get(`${THE_ONE_API_URI}/movie/${movieId}`, this.config)
             return movie;
@@ -28,7 +28,7 @@ module.exports = class LotrSDK {
         }
     }
     
-    async getQuotesForMovie (movieId, queryParameters) {
+    async getQuotesForMovie(movieId, queryParameters) {
         try {
             const uri = buildRequestURI(`${THE_ONE_API_URI}/movie/${movieId}/quote`, queryParameters);
             const { data: quotes } = await axios.get(uri, this.config)
