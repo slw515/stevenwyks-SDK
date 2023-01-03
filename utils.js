@@ -2,14 +2,14 @@ const buildRequestURI = (baseURI, queryStringParams) => {
     let uri = baseURI;
 
     if (queryStringParams) {
-        const builtQueryString = returnQueryString(queryStringParams)
+        const builtQueryString = returnQueryData(queryStringParams)
         uri += `?${builtQueryString}`;
     }    
 
     return uri;
 }
 
-const returnQueryString = (queryStringParams) => {
+const returnQueryData = (queryStringParams) => {
     const builtQueryStringArray = [];
     for (let param in queryStringParams) {
         builtQueryStringArray.push(encodeURIComponent(param) + '=' + encodeURIComponent(queryStringParams[param]));
