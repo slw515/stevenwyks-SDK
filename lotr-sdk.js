@@ -15,7 +15,7 @@ module.exports = class LotrSDK {
             const { data: movies } = await axios.get(uri, this.config)
             return movies;
         } catch(e) {
-            throw new Error({...e.response.data, status: 401});
+            throw new Error({...e.response.data});
         }
     }
     
@@ -24,7 +24,7 @@ module.exports = class LotrSDK {
             const { data: movie } = await axios.get(`${THE_ONE_API_URI}/movie/${movieId}`, this.config)
             return movie;
         } catch(e) {
-            throw new Error({...e.response.data, status: 401});
+            throw new Error({...e.response.data});
         }
     }
     
@@ -34,7 +34,7 @@ module.exports = class LotrSDK {
             const { data: quotes } = await axios.get(uri, this.config)
             return quotes;
         } catch(e) {
-            throw new Error({...e.response.data, status: 401});
+            throw new Error({...e.response.data});
         }
     }
 }
