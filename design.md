@@ -24,7 +24,7 @@ These three methods are associated with the following endpoints in the The One A
 In the case of the `getMovies()` and `getQuotesForMovie()` methods, the user of the SDK is able to pass in an object with values associated with query params that 
 can be used in the API. The `buildRequestURI()` helper function generates the final URI if query params are passed in as an object. 
 
-The query params need to be converted into a string in order to combine it with the base URI to call the API, this is done with the `returnQueryParams()` helper function.
+The query params need to be converted into a string in order to combine it with the base URI to call the API, this is done with the `returnQueryString()` helper function in the `utils.js` file.
 This function loops through the keys and values of the query params object and creates a string in the following format and appends it to the base URI:
 
 ```js
