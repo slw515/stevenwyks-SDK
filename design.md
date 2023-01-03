@@ -1,5 +1,5 @@
 ## SDK Design
-The SDK is simply an exported Javascript "class". The SDK uses the Javascript class' constructor function and expectes an API key. This API key
+The SDK is simply an exported Javascript "class". The SDK uses the Javascript class' constructor function and expects an API key. This API key
 is then bound to the instantiated object. At a high-level this SDK exposes three methods that a user can call that directly interface with the 
 The One API.
 
