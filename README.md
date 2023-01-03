@@ -63,3 +63,18 @@ try {
   console.error(error);
 }
 ```
+
+## Testing
+Testing is done with the Jest testing framework. The tests run the three main methods on the LotrSDK class and expect valid data on a successful Axios GET request and an error to be thrown when the Axios call throws an error. 
+
+Tests can be run with the following command:
+```js
+npm run test
+```
+
+The tests are in the `./tests` directory and mocked data is present in the `./mocks` directory within the `./tests` folder. The mock file mocks data received from the LotrSDK methods, mock headers for the bearer token and a mock error message that resembles that received from Axios on an error.
+
+The successful tests mock a resolved Axios request with the mock data. The test then asserts that the result of the function is identical to that of the data passed in to the mock resolved Axios request. The test also asserts that the correct headers/endpoint were used in the request, testing the generation of the config object that contains the headers as well as the generation of query params. 
+
+For the unsuccessful tests, a Axios request is rejected and an error object is passed in. The test then asserts that the method returns an object of type 
+`Error`
