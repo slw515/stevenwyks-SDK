@@ -34,6 +34,6 @@ This function loops through the keys and values of the query params object and c
 Once the final URI is generated, the GET request is made to the API with the library Axios. The config object mentioned earlier is passed in as a second argument to the
 method. This has to be done in an async/await function to await the GET request's completion with try/catch blocks to deal with any potential errors.
 
-If an error is thrown by the API call, a new Error object is created and thrown with the response data from the error. 
+If an error is thrown by the API call, a new `Error` object is created and thrown with the response data from the `Error` object. 
 
-If the data is successfully received from the API it is returned to the user of the SDK. 
+If the data is successfully received from the API it is returned to the user of the SDK and the asynchronous function will resolve with the data.
