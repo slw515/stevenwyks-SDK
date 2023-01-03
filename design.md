@@ -1,7 +1,7 @@
 ## SDK Design
-The SDK is simply an exported Javascript "class". The SDK uses the Javascript class' constructor function and expects an API key. This API key
-is then bound to the instantiated object. At a high-level this SDK exposes three methods that a user can call that directly interface with the 
-The One API.
+The SDK is simply an exported Javascript "class". The SDK uses the Javascript class' constructor function and expects an API key. 
+
+This API key is then a property to the instantiated LOTRSDK object. At a high-level this SDK exposes three methods that a user can call that directly interface with the The One API.
 
 On the instantiation of an LotrSDK object, the config object is also created using the `returnConfigObject` helper function. The config object 
 includes the bearer token that is required to use the The One API. The format of the object is as follows:
